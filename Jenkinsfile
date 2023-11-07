@@ -8,13 +8,17 @@ pipeline {
     }
 
     environment {
+        SNAP_REPO = 'vprofile-snapshot'
+        NEXUS_USER = 'admin'
+	NEXUS_PASS = '123456'
+	RELEASE_REPO = 'vprofile-release'
+	CENTRAL_REPO = 'vpro-maven-central'
+	NEXUS_IP = '172.31.47.204'
+	NEXUS_PORT = '8081'
         NEXUS_VERSION = "nexus3"
-        NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "172.31.47.204:8081"
-        NEXUS_REPOSITORY = "vprofile-release"
-	NEXUS_REPO_ID    = "vprofile-release"
-        NEXUS_CREDENTIAL_ID = "nexuslogin"
-        ARTVERSION = "${env.BUILD_ID}"
+	NEXUS_GRP_REPO = 'vpro-maven-group'
+        NEXUS_LOGIN = 'nexuslogin'
+      
     }
 	
     stages{
