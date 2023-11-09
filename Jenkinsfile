@@ -33,6 +33,7 @@ pipeline {
 				archiveArtifacts artifacts: '**/*.war'
 			}
 		}
+        }
 			
         
 	    stage('UNIT TEST'){
