@@ -26,7 +26,7 @@ pipeline {
             steps {
                 sh 'mvn -s settings.xml -DskipTests install'
             }
-        }
+        
 	    post {
 			success {
 				echo "Now archiving"
@@ -34,7 +34,7 @@ pipeline {
 			}
 		}
 			
-        }
+        
 	    stage('UNIT TEST'){
             steps {
                 sh 'mvn -s settings.xml test'
